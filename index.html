@@ -255,6 +255,457 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
    if (window.componentsRegistry.manifestsLoadedResolve) { window.componentsRegistry.manifestsLoadedResolve() }
   </script>
  </head>
+ 
+ 
+ <!--side eye的style库-->
+ <style type="text/css">
+    body {
+        font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    h1 {
+        font-weight: 300;
+        line-height: 1.15em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    a:link, a:visited {
+        color: #00aeff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #208799;
+    }
+
+
+    b:link, b:visited {
+        color: #00aeff;
+        text-decoration: none;
+    }
+
+    b:hover {
+        color: #208799;
+    }
+
+    h1, h2{
+        text-align: center;
+    }
+
+    
+
+    h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-weight: 400;
+        margin: 16px 0px 4px 0px;
+    }
+
+    .paper-title {
+        padding: 16px 0px 16px 0px;
+    }
+
+    section {
+        margin: 32px 0px 32px 0px;
+        text-align: justify;
+        clear: both;
+    }
+
+    .col-5 {
+        width: 20%;
+        float: left;
+    }
+
+    .col-4 {
+        width: 25%;
+        float: left;
+    }
+
+    .col-3 {
+        width: 33%;
+        float: left;
+    }
+
+    .col-2 {
+        width: 50%;
+        float: left;
+    }
+
+
+    .fig-center {
+        width: 80%;
+        float: center;
+    }
+
+    .col-1 {
+        width: 100%;
+        float: left;
+    }
+
+    .row, .author-row, .affil-row {
+        overflow: auto;
+    }
+
+    .author-row, .affil-row {
+        font-size: 26px;
+    }
+
+    .row {
+        margin: 16px 0px 16px 0px;
+    }
+
+    .authors {
+        font-size: 26px;
+    }
+
+    .affil-row {
+        margin-top: 16px;
+    }
+
+    .teaser {
+        max-width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .fig-caption {
+        text-align: center;
+        max-width: 100%;
+
+    }
+
+    .audio-caption {
+        text-align: center;
+        max-width: 100%;
+		color: rgb(139, 0, 0);
+
+    }
+
+    .screenshot {
+        width: 80%;
+        border: 1px solid #ddd;
+    }
+
+    .screenshot-el {
+        margin-bottom: 1px;
+    }
+
+    hr {
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 0;
+    }
+
+    .material-icons {
+        vertical-align: -6px;
+    }
+
+    p {
+        line-height: 1.25em;
+    }
+
+    .caption {
+        font-size: 16px;
+        /*font-style: italic;*/
+        color: #666;
+        text-align: center;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    video {
+        display: block;
+        margin: auto;
+    }
+
+    figure {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #bibtex pre {
+        font-size: 13.5px;
+        background-color: #eee;
+        padding: 16px;
+    }
+
+    .blue {
+        color: #2c82c9;
+        font-weight: bold;
+    }
+
+    .orange {
+        color: #d35400;
+        font-weight: bold;
+    }
+
+    .overlayText {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .overlayTextFullWide {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .overlayTextHalfWide {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .table {
+	width:100%;
+	border:1px solid color-form-highlight;
+    }
+    
+    .table-header {
+    	display:flex;
+    	width:100%;
+    	background:rgb(32, 126, 181);
+    	padding:(half-spacing-unit * 1.5) 0;
+    }
+    
+    .table-row {
+    	display:flex;
+    	width:100%;
+    	padding:(half-spacing-unit * 1.5) 0;
+    
+    }
+    
+    .table-data, .header__item {
+    	flex: 1 1 20%;
+    	text-align:center;
+    }
+
+    .line{
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: rgb(92, 84, 84);
+    }
+
+    .stack{
+        display: block !important;
+        width: auto;
+    }
+    
+    .header__item {
+    	text-transform:uppercase;
+    }
+
+    .paper-btn {
+        position: relative;
+        text-align: center;
+
+        display: inline-block;
+        margin: 8px;
+        padding: 8px 8px;
+
+        border-width: 0;
+        outline: none;
+        border-radius: 2px;
+
+        background-color: #48b64e;
+        color: white !important;
+        font-size: 20px;
+        width: 100px;
+        font-weight: 600;
+    }
+
+    .paper-btn-parent {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0px;
+    }
+
+    .paper-btn:hover {
+        opacity: 0.85;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .boxed {
+				padding: 0.5em 2em 2em 2em;
+				background-color: #F8F8F8;
+	
+				max-width: 90%;
+				margin: 0 auto !important; 
+				float: none !important; ;
+	}
+	.boxed_mini {
+				padding: 0.5em 0.5em 0.5em 0.5em;
+				max-width: 40%;
+				background-color: #ECF9FF;
+				
+	}
+
+    .venue {
+        /*color: #B6486F;*/
+        font-size: 30px;
+
+    }
+
+    .myButton_l {
+				display:inline-block;
+				cursor:pointer;
+				font-family: Montserrat,sans-serif;
+				font-weight: bold;
+				font-size:15px;
+				letter-spacing: 0.1em;
+				padding:10px 10px;
+				text-decoration:none;
+			}
+	.myButton {
+				 background-color:#87d4f5;
+				-moz-border-radius:18px;
+				-webkit-border-radius:18px;
+				border-radius:18px;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family: Montserrat,sans-serif;
+				font-weight: bold;
+				font-size:25px;
+				letter-spacing: 0.1em;
+				padding:10px 50px;
+				text-decoration:none;
+			}
+	.myButton:hover {
+				background-color:#478fcc;
+				color:#ffffff;
+				
+			} 
+            /* Style the navigation menu */
+    .navbar {
+    /* margin: 0%;
+    height: 1%;
+    padding: 0%; */
+    margin: auto;
+    text-align: center;
+    padding-top: 0.14%;
+    min-height: 25px;
+    width: 100%;
+    background-color: rgb(0, 140, 255);
+    /*text-align: center;*/
+    overflow: auto;
+    }
+
+    /* Navigation links */
+    .navbar a {
+    float: left;
+    /*height: 90%;*/
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.8em;
+    width: 20%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+    }
+
+    /* Add a background color on mouse-over */
+    .navbar a:hover {
+    background-color: rgb(0, 110, 255);
+    }
+
+    /* Style the current/active link */
+    .navbar a.active {
+    background-color:rgb(0, 120, 255);
+    }
+
+    .button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 30px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    }
+
+    .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    }
+
+    .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+    }
+
+    .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+    }
+
+
+    /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+    @media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+    }
+	.youtube{
+	padding-bottom:60%; position:relative;}
+	.elementor-video-iframe{
+	max-width:100%;width:70%;border:none;position:absolute;height:60%;}
+
+</style>
+ 
+ 
  <body class="">
   <script type="text/javascript">
    var bodyCacheable = true;
@@ -288,8 +739,11 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
             });
         }).observe(document.body);
     }
+	
+	
   </script>
   <pages-css id="pages-css">
+  
    <style id="css_masterPage">
     :root{--color_0:255,255,255;--color_27:175,175,175;--color_1:255,255,255;--color_2:0,0,0;--color_3:237,28,36;--color_4:0,136,203;--color_5:255,203,5;--color_6:114,114,114;--color_7:176,176,176;--color_8:255,255,255;--color_28:132,132,132;--color_9:114,114,114;--color_10:176,176,176;--color_11:245,245,245;--color_12:220,220,220;--color_13:189,189,189;--color_14:150,150,150;--color_15:107,107,107;--color_16:241,235,227;--color_17:223,207,186;--color_18:210,192,168;--color_29:88,88,88;--color_19:105,95,84;--color_20:52,48,42;--color_21:202,199,218;--color_22:139,134,158;--color_23:90,85,110;--color_24:39,34,62;--color_25:23,20,36;--color_30:44,44,44;--color_31:246,198,183;--color_32:237,144,116;--color_33:178,108,87;--color_34:119,72,58;--color_35:59,36,29;--font_0:italic normal normal 45px/1.4em 'times new roman',times,serif;--font_1:normal normal normal 18px/1.4em 'times new roman',times,serif;--font_2:normal normal normal 28px/1.4em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;--font_3:normal normal normal 60px/1.4em 'times new roman',times,serif;--font_4:normal normal bold 40px/1.4em 'times new roman',times,serif;--font_5:normal normal bold 30px/1.4em 'times new roman',times,serif;--font_6:italic normal bold 23px/1.4em 'times new roman',times,serif;--font_7:normal normal normal 18px/1.4em 'times new roman',times,serif;--font_8:normal normal normal 14px/1.4em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;--font_9:normal normal normal 12px/1.4em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;--font_10:normal normal normal 10px/1.4em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;--wix-ads-height:0px;--wix-ads-top-height:0px;--site-width:980px;--above-all-z-index:100000;--portals-z-index:100001;--minViewportSize:320;--color_26:220,220,220;--maxViewportSize:1920}.font_0{font:var(--font_0);color:rgb(var(--color_1));letter-spacing:0em}.font_1{font:var(--font_1);color:rgb(var(--color_15));letter-spacing:0em}.font_2{font:var(--font_2);color:rgb(var(--color_24));letter-spacing:0em}.font_3{font:var(--font_3);color:rgb(var(--color_25));letter-spacing:0em}.font_4{font:var(--font_4);color:rgb(var(--color_24));letter-spacing:0em}.font_5{font:var(--font_5);color:rgb(var(--color_24));letter-spacing:0em}.font_6{font:var(--font_6);color:rgb(var(--color_24));letter-spacing:0em}.font_7{font:var(--font_7);color:rgb(var(--color_24));letter-spacing:0em}.font_8{font:var(--font_8);color:rgb(var(--color_24));letter-spacing:0em}.font_9{font:var(--font_9);color:rgb(var(--color_14));letter-spacing:0em}.font_10{font:var(--font_10);color:rgb(var(--color_15));letter-spacing:0em}.color_0{color:rgb(var(--color_0))}.color_1{color:rgb(var(--color_1))}.color_2{color:rgb(var(--color_2))}.color_3{color:rgb(var(--color_3))}.color_4{color:rgb(var(--color_4))}.color_5{color:rgb(var(--color_5))}.color_6{color:rgb(var(--color_6))}.color_7{color:rgb(var(--color_7))}.color_8{color:rgb(var(--color_8))}.color_9{color:rgb(var(--color_9))}.color_10{color:rgb(var(--color_10))}.color_11{color:rgb(var(--color_11))}.color_12{color:rgb(var(--color_12))}.color_13{color:rgb(var(--color_13))}.color_14{color:rgb(var(--color_14))}.color_15{color:rgb(var(--color_15))}.color_16{color:rgb(var(--color_16))}.color_17{color:rgb(var(--color_17))}.color_18{color:rgb(var(--color_18))}.color_19{color:rgb(var(--color_19))}.color_20{color:rgb(var(--color_20))}.color_21{color:rgb(var(--color_21))}.color_22{color:rgb(var(--color_22))}.color_23{color:rgb(var(--color_23))}.color_24{color:rgb(var(--color_24))}.color_25{color:rgb(var(--color_25))}.color_26{color:rgb(var(--color_26))}.color_27{color:rgb(var(--color_27))}.color_28{color:rgb(var(--color_28))}.color_29{color:rgb(var(--color_29))}.color_30{color:rgb(var(--color_30))}.color_31{color:rgb(var(--color_31))}.color_32{color:rgb(var(--color_32))}.color_33{color:rgb(var(--color_33))}.color_34{color:rgb(var(--color_34))}.color_35{color:rgb(var(--color_35))}.backcolor_0{background-color:rgb(var(--color_0))}.backcolor_1{background-color:rgb(var(--color_1))}.backcolor_2{background-color:rgb(var(--color_2))}.backcolor_3{background-color:rgb(var(--color_3))}.backcolor_4{background-color:rgb(var(--color_4))}.backcolor_5{background-color:rgb(var(--color_5))}.backcolor_6{background-color:rgb(var(--color_6))}.backcolor_7{background-color:rgb(var(--color_7))}.backcolor_8{background-color:rgb(var(--color_8))}.backcolor_9{background-color:rgb(var(--color_9))}.backcolor_10{background-color:rgb(var(--color_10))}.backcolor_11{background-color:rgb(var(--color_11))}.backcolor_12{background-color:rgb(var(--color_12))}.backcolor_13{background-color:rgb(var(--color_13))}.backcolor_14{background-color:rgb(var(--color_14))}.backcolor_15{background-color:rgb(var(--color_15))}.backcolor_16{background-color:rgb(var(--color_16))}.backcolor_17{background-color:rgb(var(--color_17))}.backcolor_18{background-color:rgb(var(--color_18))}.backcolor_19{background-color:rgb(var(--color_19))}.backcolor_20{background-color:rgb(var(--color_20))}.backcolor_21{background-color:rgb(var(--color_21))}.backcolor_22{background-color:rgb(var(--color_22))}.backcolor_23{background-color:rgb(var(--color_23))}.backcolor_24{background-color:rgb(var(--color_24))}.backcolor_25{background-color:rgb(var(--color_25))}.backcolor_26{background-color:rgb(var(--color_26))}.backcolor_27{background-color:rgb(var(--color_27))}.backcolor_28{background-color:rgb(var(--color_28))}.backcolor_29{background-color:rgb(var(--color_29))}.backcolor_30{background-color:rgb(var(--color_30))}.backcolor_31{background-color:rgb(var(--color_31))}.backcolor_32{background-color:rgb(var(--color_32))}.backcolor_33{background-color:rgb(var(--color_33))}.backcolor_34{background-color:rgb(var(--color_34))}.backcolor_35{background-color:rgb(var(--color_35))}#SITE_CONTAINER.focus-ring-active :not(.has-custom-focus):not(.ignore-focus):focus, #SITE_CONTAINER.focus-ring-active :not(.has-custom-focus):not(.ignore-focus):focus ~ .wixSdkShowFocusOnSibling{box-shadow:0 0 0 1px #ffffff, 0 0 0 3px #116dff !important;z-index:1}[data-mesh-id=SITE_HEADERinlineContent]{height:auto;width:100%}[data-mesh-id=SITE_HEADERinlineContent-gridContainer]{position:static;display:grid;height:auto;width:100%;min-height:683px;grid-template-rows:repeat(2, min-content) 1fr;grid-template-columns:100%}[data-mesh-id=SITE_HEADERinlineContent-gridContainer] > [id="hy7cl80e"]{position:relative;margin:0px 0px 15px calc((100% - 980px) * 0.5);left:-907px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=SITE_HEADERinlineContent-gridContainer] > [id="comp-ka24zf7e"]{position:relative;margin:96px 0px 10px calc((100% - 980px) * 0.5);left:240px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=SITE_HEADERinlineContent-gridContainer] > [id="comp-kja111zb"]{position:relative;margin:54px 0px 10px calc((100% - 980px) * 0.5);left:860px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=SITE_HEADERinlineContent-gridContainer] > [id="hyjx045o"]{position:relative;margin:0px 0px 10px calc((100% - 980px) * 0.5);left:185px;grid-area:2 / 1 / 3 / 2;justify-self:start;align-self:start}[data-mesh-id=SITE_HEADERinlineContent-gridContainer] > [id="comp-ka23obk5"]{position:relative;margin:0px 0px 10px calc((100% - 980px) * 0.5);left:71px;grid-area:3 / 1 / 4 / 2;justify-self:start;align-self:start}[data-mesh-id=SITE_FOOTERinlineContent]{height:auto;width:100%}[data-mesh-id=SITE_FOOTERinlineContent-gridContainer]{position:static;display:grid;height:auto;width:100%;min-height:auto;grid-template-rows:1fr;grid-template-columns:100%}[data-mesh-id=SITE_FOOTERinlineContent-gridContainer] > [id="comp-jshe8qav"]{position:relative;margin:22px 0px 34px calc((100% - 980px) * 0.5);left:205px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent]{height:auto;width:850px}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer]{position:static;display:grid;height:auto;width:100%;min-height:auto;grid-template-rows:1fr;grid-template-columns:100%}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23hfat"]{position:relative;margin:0px 0px 0px 0;left:0px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23i1a5"]{position:relative;margin:0px 0px 0px 0;left:142px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23l4hu"]{position:relative;margin:0px 0px 0px 0;left:282px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23lir8"]{position:relative;margin:0px 0px 0px 0;left:421px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23m4ex"]{position:relative;margin:0px 0px 0px 0;left:566px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}[data-mesh-id=comp-ka23obk5inlineContent-gridContainer] > [id="comp-ka23ml25"]{position:relative;margin:0px 0px 0px 0;left:708px;grid-area:1 / 1 / 2 / 2;justify-self:start;align-self:start}#hy7cl80e{left:0;margin-left:0;width:100%;min-width:980px;height:496px}#comp-ka24zf7e{width:428px;height:147px}#comp-kja111zb{width:80px;height:347px}#hyjx045o{width:601px;height:50px}#comp-jshe8qav{width:538px;height:118px}#comp-ka23hfat{width:142px;height:40px}#comp-ka23i1a5{width:142px;height:40px}#comp-ka23l4hu{width:142px;height:40px}#comp-ka23lir8{width:142px;height:40px}#comp-ka23m4ex{width:142px;height:40px}#comp-ka23ml25{width:142px;height:40px}#masterPage{left:0;margin-left:0;width:100%;min-width:980px}#SITE_HEADER{left:0;margin-left:0;width:100%;min-width:980px;--pinned-layer-in-container:50;--above-all-in-container:49}#PAGES_CONTAINER{left:0;margin-left:0;width:100%;min-width:980px;--pinned-layer-in-container:51;--above-all-in-container:49}#SITE_FOOTER{left:0;margin-left:0;width:100%;min-width:980px;--pinned-layer-in-container:52;--above-all-in-container:49}#comp-ka23obk5{width:850px}#SITE_PAGES{left:0;margin-left:0;width:100%;min-width:980px}#masterPage.landingPage #SITE_HEADER{display:none}#masterPage.landingPage #SITE_FOOTER{display:none}#masterPage.landingPage #SITE_HEADER-placeholder{display:none}#masterPage.landingPage #SITE_FOOTER-placeholder{display:none}#masterPage:not(.landingPage) #PAGES_CONTAINER{margin-top:0px;margin-bottom:0px}
 	@font-face {
@@ -418,7 +872,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
              <div class="" data-mesh-id="Containerz00slinlineContent" data-testid="inline-content">
               <div data-mesh-id="Containerz00slinlineContent-gridContainer" data-testid="mesh-container-content">
                
-	        <--! 标题部分 -->
+	        <!-- 标题部分 -->
                <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-kb1nxam8" style="margin-bottom: -45px;">
                 <p class="font_7" style="font-size:33px; line-height:2em; text-align:center;">
                  <span style="font-weight:bold;">
@@ -430,8 +884,11 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                  </span>
                 </p>
                </div>
+			   
+			<!-- 插入视频--> 
+			<!--<iframe width="540" height="508" src="https://www.youtube.com/embed/t32QvpfOHqw?list=TLGGLAlV_Kjvua4wNTA2MjAyMw" </iframe>-->
 		      
-		<!-- 被注释掉的 -->  
+		    <!-- 被注释掉的 -->  
                <!-- <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-kb1nxam2">
                 <p class="font_7" style="font-size:47px; line-height:2em; text-align:center;">
                  <span style="font-weight:bold;">
@@ -502,7 +959,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                 </p>
                 <p class="font_7" style="font-size:22px; line-height:1.5em;">
                  <span style="font-size:22px;">
-                  Recent papers have suggested various side-channel attacks for eavesdropping sound by analyzing the side effects of sound waves on nearby objects (e.g., a bag of chips and window) and devices (e.g., motion sensors). These methods pose a great threat to privacy, however they are limited in one of the following ways: they (1) cannot be applied in real time (e.g., Visual Microphone), (2) are not external, requiring the attacker to compromise a device with malware (e.g., Gyrophone), or (3) are not passive, requiring the attacker to direct a laser beam at an object (e.g., laser microphone).
+				  Periscope is a vulnerability located in the audio circuit of mobile device, which allows attacker  
+				  Recent papers have suggested various side-channel attacks for eavesdropping sound by analyzing the side effects of sound waves on nearby objects (e.g., a bag of chips and window) and devices (e.g., motion sensors). These methods pose a great threat to privacy, however they are limited in one of the following ways: they (1) cannot be applied in real time (e.g., Visual Microphone), (2) are not external, requiring the attacker to compromise a device with malware (e.g., Gyrophone), or (3) are not passive, requiring the attacker to direct a laser beam at an object (e.g., laser microphone).
                   <br/>
                   In this paper, we introduce "Lamphone," a novel side-channel attack for eavesdropping sound; this attack is performed by using a remote electro-optical sensor to analyze a hanging light bulb's frequency response to sound.We show how fluctuations in the air pressure on the surface of the hanging bulb (in response to sound), which cause the bulb to vibrate very slightly (a millidegree vibration), can be exploited by eavesdroppers to recover speech and singing, passively, externally, and in real time.We analyze a hanging bulb's response to sound via an electro-optical sensor and learn how to isolate the audio signal from the optical signal. Based on our analysis, we develop an algorithm to recover sound from the optical measurements obtained from the vibrations of a light bulb and captured by the electro-optical sensor. We evaluate Lamphone's performance in a realistic setup and show that Lamphone can be used by eavesdroppers to recover human speech (which can be accurately identified by the Google Cloud Speech API) and singing (which can be accurately identified by Shazam and SoundHound) from a bridge located 25 meters away from the target room containing the hanging light bulb.
                  </span>
@@ -513,7 +971,35 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                  </span>
                 </p>
                </div>
-
+			   
+			   <div> 
+                  <figure style="width: 45%">
+                  <center><img width="95%" src="images/mobileDevice_EMR.png"></center>
+		          <div class="overlayText">
+                     <br>
+                    <p id="topText" class="fig-caption"><font size="smaller"><strong>Fig. 1:</strong> 
+                         Periscope presents an audio eavesdropping system that exploits emmitd EMR of mobile device to recover victim's private audios.
+                         </font></p>
+                    </div>
+                 </figure>
+               </div>
+			   
+			   
+			   <!-- 插入视频 Demo1-->
+			   <div class="col-2 text-center" style="margin-top: 1%;">
+                  <iframe width="80%" Height="255" src="https://www.youtube.com/embed/NojqcfywySQ"
+					          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				  </iframe>
+			   </div>
+			   
+			   <div class="col-2 text-center" style="margin-top: 1%;">
+                  <iframe width="80%" Height="255" src="https://www.youtube.com/embed/lTMGXdhVDwM"
+					          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				  </iframe>
+			   </div>
+			   
+			   <br> 
+			   
                <!-- part2 Recovered Audio samples  音频展示部分-->
                <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-k8in69323">
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
@@ -523,6 +1009,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                             </span>
                         </span>
                     </p>
+					
                     <!-- 占位符 -->
                     <p class="font_8" style="font-size:14px;">
                         <span class="wixGuard">
@@ -540,10 +1027,14 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                         </span>
                     </p>
 
+
+
+                <!-- Audio chirp: Original与recovered在同一行上对齐-->	
+				<!--小标题 chirp-->
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:25px;">
                             <span style="font-weight:bold;">
-                                Chirp 0_5000Hz
+                                Chirp 0-5000Hz
                             </span>
                         </span>
                     </p>
@@ -552,28 +1043,27 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          ​
                         </span>
                     </p>
-                    <!-- audio Chirp chirp 按照语音类别、复杂程度进行的分区-->
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/1_Chirp_0_5000Hz/Original_chirp.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original chirp]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/1_Chirp_0_5000Hz/Recovered_chirp.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered chirp]
-                        </fonts>
-                    </div>
-                    <!-- audio Word -->
-                    <p class="font_8" style="font-size:14px;">
-                        <span class="wixGuard">
+				<!--audio按钮展示部分-->
+				<div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/1_Chirp_0_5000Hz/Recovered_chirp.wav" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/1_Chirp_0_5000Hz/Recovered_chirp.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered</p>
+                      </div>
+                      </div>
+					  
+			    <!--小标题 Word-->
+			   <p class="font_8" style="font-size:14px;">
+                    <span class="wixGuard">
                          ​
-                        </span>
+                    </span>
                     </p>
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:25px;">
@@ -587,92 +1077,78 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          ​
                         </span>
                     </p>
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/2_Word/1_Original_monday.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original word: "monday"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/1_Recovered_monday.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered word: "monday"]
-                        </fonts>
-                    </div>
-                    <!-- audio word 2 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/2_Original_apple.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original word: "apple"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/2_Recovered_apple.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered word: "apple"]
-                        </fonts>
-                    </div>
-                    <!-- audio word 3 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/3_Original_english.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original word: "english"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/3_Recovered_english.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered word: "english"]
-                        </fonts>
-                    </div>
-                    <!-- audio word 4 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/4_Original_beautiful.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original word: "beautiful"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/4_Recovered_beautiful.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered word: "beautiful"]
-                        </fonts>
-                    </div>
-                    <!-- audio word 5 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/5_Original_attack.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original word: "attack"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/2_Word/5_Recovered_attack.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered word: "attack"]
-                        </fonts>
-                    </div>
-                    
-                    <!-- audio Music -->
+			    <!--audio按钮展示部分-->
+				<div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/2_Word/1_Original_monday.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original word “Monday”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/2_Word/1_Recovered_monday.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered word “Monday”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/2_Word/2_Original_apple.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original word “Apple”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/2_Word/2_Recovered_apple.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered word “Apple”</p>
+                      </div>
+                      </div>	
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/2_Word/3_Original_english.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original word “English”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/2_Word/3_Recovered_english.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered word “English”</p>
+                      </div>
+                      </div>
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/2_Word/4_Original_beautiful.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original word “Beautiful”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/2_Word/4_Recovered_beautiful.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered word “Beautiful”</p>
+                      </div>
+                      </div>
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/2_Word/5_Original_attack.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original word “Attack”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/2_Word/5_Recovered_attack.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered word “Attack”</p>
+                      </div>
+                      </div>
+               <!-- "Title" audio Music -->
                     <p class="font_8" style="font-size:14px;">
                         <span class="wixGuard">
                          ​
@@ -690,92 +1166,78 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          ​
                         </span>
                     </p>
-                    <!-- audio Music 1 -->
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/3_Music/1_Original_iPoneTone.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original music: iPhone Tone]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/1_Recovered_iPhoneTone1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered music: iPhone Tone]
-                        </fonts>
-                    </div>
-                    <!-- audio Music 2 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/2_Original_myHeartWillGoOn.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original music: My Heart Will Go On]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/2_Recovered_myHeartWillGoOn.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered music: My Heart Will Go On]
-                        </fonts>
-                    </div>
-                    <!-- audio Music 3 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/3_Original_grasswalk.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original music: Grass Walk]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/3_Recovered_grasswalk.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered music: Grass Walk]
-                        </fonts>
-                    </div>
-                    <!-- audio Music 4 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/4_Original_summertrain.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original music: Summer Train]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/4_Recovered_Summertrain.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered music: Summer Train]
-                        </fonts>
-                    </div>
-                    <!-- audio Music 5 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/5_Original_violinMelody.mp3">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original music: Violin Melody]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/3_Music/5_Recovered_violinMelody.mp3">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered music: Violin Melody]
-                        </fonts>
-                    </div>
-                    <!-- audio speech -->
+               <!-- Music 展示section-->	
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/3_Music/1_Original_iPoneTone.wav" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “iphone Tone”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/3_Music/1_Recovered_iPhoneTone1.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “iphone Tone”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/3_Music/2_Original_myHeartWillGoOn.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “My Heart Will Go On”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/3_Music/2_Recovered_myHeartWillGoOn.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “My Heart Will Go On”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/3_Music/3_Original_grasswalk.wav" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Grass Walk”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/3_Music/3_Recovered_grasswalk.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Grass Walk”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/3_Music/4_Recovered_Summertrain.wav" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Summer Train”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/3_Music/5_Original_violinMelody.mp3" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Summer Train”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/3_Music/5_Original_violinMelody.mp3" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “violinMelody”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/3_Music/5_Recovered_violinMelody.mp3" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “violinMelody”</p>
+                      </div>
+                      </div>
+			   <!-- "Title" audio Sentence -->
                     <p class="font_8" style="font-size:14px;">
                         <span class="wixGuard">
                          ​
@@ -784,7 +1246,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:25px;">
                             <span style="font-weight:bold;">
-                                Speech
+                                Harvard Speech Corpus
                             </span>
                         </span>
                     </p>
@@ -793,217 +1255,65 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          ​
                         </span>
                     </p>
-                    <!-- audio Speech 1 -->
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/1_Original_hiAreYouBob.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech: "Hi are you Bob?"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/1_Recovered_hiAreYouBob.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech: "Hi are you Bob?"]
-                        </fonts>
-                    </div>
-                    <!-- audio Speech 2 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/2_Original_sheHadYou.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech: "She had you."]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/2_Recovered_sheHadYou.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech: "She had you."]
-                        </fonts>
-                    </div>
-                    <!-- audio Speech 3 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/3_Original_canYouHearMe.m4a">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech: "Can you hear me?"]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/3_Recovered_canYouHearMe.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech: "Can you hear me?"]
-                        </fonts>
-                    </div>
-                    <!-- audio Speech 4 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/4_Original_oneTwoThree.mp3">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech: "One two three."]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/4_Speech/4_Recovered_oneTwoThree.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech: "One two three."]
-                        </fonts>
-                    </div>
-                    <!-- audio TIMIT_dataset -->
-                    <p class="font_8" style="font-size:14px;">
-                        <span class="wixGuard">
-                         ​
-                        </span>
-                    </p>
-                    <p class="font_7" style="font-size:26px; line-height:1.5em;">
-                        <span style="font-size:25px;">
-                            <span style="font-weight:bold;">
-                                TIMIT Dataset
-                            </span>
-                        </span>
-                    </p>
-                    <p class="font_8" style="font-size:14px;">
-                        <span class="wixGuard">
-                         ​
-                        </span>
-                    </p>
-                    <p class="font_7" style="font-size:26px; line-height:1.5em;">
-                        <span style="font-size:20px;">
-                            <span style="font-weight:bold;">
-                                &nbsp; group 1
-                            </span>
-                        </span>
-                    </p>
-                    <!-- audio dataset 1 -->
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/1_Original_fadg0Sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/1_Recovered_fadg0Sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-                    <!-- audio dataset 2 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/2_Original_fadg0Sa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/2_Recovered_fadg0sa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-                    <!-- audio dataset 3 -->
-                    <p class="font_7" style="font-size:26px; line-height:1.5em;">
-                        <span style="font-size:20px;">
-                            <span style="font-weight:bold;">
-                                &nbsp; group 2
-                            </span>
-                        </span>
-                    </p>
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/3_Original_mccs0Sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/3_recovered_mccs0sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-                    <!-- audio dataset 4 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/4_Original_mccs0Sa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/4_Recovered_mccs0sa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-                    <!-- audio dataset 5 -->
-                    <p class="font_7" style="font-size:26px; line-height:1.5em;">
-                        <span style="font-size:20px;">
-                            <span style="font-weight:bold;">
-                                &nbsp; group 3
-                            </span>
-                        </span>
-                    </p>
-                    <div>
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/5_Original_mabw0Sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/5_Recovered_mabw0sa1.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-                    <!-- audio dataset 6 -->
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/6_Original_mabwSa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Original speech]
-                        </fonts>
-                    </div>
-                    <div style="margin-top:20px;">
-                        <audio controls="controls">
-                            <source src="sound/5_recovered_TIMITdataset/6_Recovered_mabwSa2.wav">
-                        </audio>
-                        <fonts style="color: rgb(139, 0, 0);font-size:20px; float: none;position: relative; top: -1em">
-                            [Recovered speech]
-                        </fonts>
-                    </div>
-               </div>
-               
+              <!-- audio Sentence 展示section -->
+			  <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/4_Speech/1_Original_hiAreYouBob.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Hi are you Bob？”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/4_Speech/1_Recovered_hiAreYouBob.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Hi are you Bob？”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/4_Speech/2_Original_sheHadYou.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “She had you”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/4_Speech/2_Recovered_sheHadYou.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “She had you”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/4_Speech/3_Original_canYouHearMe.m4a" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Can you hear me?”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/4_Speech/3_Recovered_canYouHearMe.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Can you hear me?”</p>
+                      </div>
+                      </div>
+			   <div class="col-2 text-center" style="margin-top: 1%;"> 
+                      <center><audio controls autoplay muted><source src="sound/4_Speech/4_Original_oneTwoThree.mp3" type="audio/mpeg"></audio></center>
+		               <div class="overlayText"style="margin-top: 0.9%;">
+
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “One two three.”</p>
+                       </div>
+                      </div>
+    
+               <div class="col-2 text-center" style="margin-top: 1%;"> 
+                     <center><audio controls autoplay muted><source src="sound/4_Speech/4_Recovered_oneTwoThree.wav" type="audio/mpeg"></audio></center>
+		              <div class="overlayText" style="margin-top: 0.9%;">
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “One two three.”</p>
+                      </div>
+                      </div>
+			  
+
                <!-- <div id="comp-kb1gobss" class="VideoPlayer2054936319__root">
                     <video id="comp-kb1gobss" poster="images/cover.jpeg" src="videos/201799288-1-192.mp4" muted="muted" controls="controls" loop="loop"></video>
                 </div> -->
