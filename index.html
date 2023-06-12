@@ -960,10 +960,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                  <span style="font-size:22px;">
 				  Periscope is the first proof-of-concept system that demonstrates the vulnerabilities of headphone-plugged mobile devices. 
 				  It shows that unintentionally leaked electromagnetic radiations (EMR) from mobile devices’ audio amplifiers can be 
-				  exploited as an effective side-channel in recovering victim’s audio sounds. This page will present the execution of Periscope attack 
-				  in two daily headphone usage scenerios via two demos and provide the recovered audio samples for evaluating the effectiveness of this 
-				  audio eavesdropping attack. 
-				  
+				  exploited as an effective side-channel in recovering victim’s audio sounds. This page presents the demo of Periscope attack 
+				  and its recovered audio samples.  
                  </span>
                 </p>
 				
@@ -980,7 +978,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 				  <div class="overlayText">
                      <br>
                     <p id="topText" class="fig-caption"><font size="smaller"><strong>Fig. 1:</strong> 
-                         Periscope is an audio eavesdropping system that exploits emmitd EMR of mobile device to recover victim's private audios.
+                         Periscope exploits the EMR of mobile devices to recover the victim’s private audio 
+						 in daily headphone usage scenarios.
                          </font></p>
                     </div>
                </div>
@@ -1013,12 +1012,11 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 			   <!-- 关于Demo的描述 Description of live video-->
 			   <p class="font_7" style="font-size:22px; line-height:1.5em;">
                  <span style="font-size:22px;">
-				  To show how Periscope attack is conducted in daily scenarios, two short videos that recorded the entire process of employing 
-				  Periscope to obtain victim's private audios are provided below. During this process, a tiny 
-				  EMR sensory device that can be hidden in victim's surroundings is employed to record the real-time EMR readings. 
-				  The attacker located in a remote place (away from several meters) monitors the readings on the laptop via a WiFi connection. 
-                  Once a raised variations of the readings are detected, the audio recovery module will start and convert the raw EMR readings
-				  to audio sounds. 
+				  The Periscope’s eavesdropping system includes a portable Wi-Fi access point, an EMR sensor, and a laptop. 
+				  We use a JDread 9600 portable access point to provide Wi-Fi converge for the EMR sensory device (ESP32 board).
+				  The EMR signals measured by the sensor were then transmitted to a remote laptop located up to 15 meters away. 
+				  The audio recovery procedures run in realtime on the laptop to process the EMR measurements and outputs 
+				  the recovered sounds.
                  </span>
                 </p>
 				
@@ -1044,7 +1042,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 				  </iframe></center>
 				  <div class="overlayText">
                     <p id="topText" class="fig-caption"><font size="smaller"><strong>Video. 1:</strong> 
-                         The EMR sensory device is mounted under a desk in the study room. The attacker pretend using his laptop for learning his course. 
+                         The victim placed his smartphone on the table. To launch a stealthy attack,
+                         the attacker placed the eavesdropping devices underneath a wooden table.
                          </font></p>
                     </div>
 			   </div>
@@ -1063,8 +1062,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 				  </iframe></center>
 				  <div class="overlayText">
                     <p id="topText" class="fig-caption"><font size="smaller"><strong>Video. 2:</strong> 
-                         The EMR sensory device is hidden in a bag of the attacker's colleage. On a subway cabin, she can act as a commuter  
-					     and change her location to be close to the targeted victim but it will not raise the victim's vigilance.
+                         The victim sits on the chair and holds the smartphone with a natural body posture. The attacker
+                         places the EMR sensory device in a bag of his colleague.
                          </font></p>
                     </div>
 			   </div>
@@ -1086,12 +1085,9 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     </p>
                     <p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-                            Speech and music is the most frequently played sound type on users' mobile device. To verify the effectiveness of employing 
-							Periscope to eavesdrop a wide range of audios potentially played on a targeted mobile device, we performed Periscope attack 
-							on two original audio dataset that are stand for music and speech respectively. In particular, for every dataset, the 
-							original audio is played on an iPhone 14 connected with a pair of earpods. The samples of original and recovered audios 
-							are displayed below. To evaluate the intelligibility of the recovred audios, we can play the audios and listen them directly, then compare 
-							them to the original. 
+                         The original and recovered audio samples are displayed below. 
+						 We can evaluate the quality of the recovered audios by comparing them
+						 with the original audios. 
 							
                         </span>
                     </p>
@@ -1114,8 +1110,9 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 					
 					<p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-                            The selected samples of music dataset include a ringtones of phone calling (iPhone Tone), a popular songs (My heart will go on) and 
-							a background music for electronic game (Grass Walk). All the recovered music can be correctly recognized by a music recognition tool (Shazam).  
+                            The music samples include a ringtones of a phone call (iPhone Tone), a popular songs 
+							(My heart will go on) and a background music for electronic game (Grass Walk). All the recovered 
+							music can be correctly recognized by a music recognition tool (Shazam).  
 							
                         </span>
                     </p>
@@ -1215,11 +1212,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     </p>
 					<p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-							We use the Harvard Sentence as the eavedropping contents, which is a recommened corpus for speech quality measurements 
-							in IEEE Standrd. Asiding from listening the recovered audios of these sentence, we further input them to the Microsoft
-							Speech to Text tool, and achieves a average word error rate of 7.44% for all tested audios. The partly recovered samples 
-							are provided below. 
-							
+						    The speech samples includes 4 sentences, which is from the Harvard Sentences. Moreover, we achieves a word error
+							rate (WER) as low as 7.44% on Microsoft speech to text tool across all tested audios in our experinment.
                         </span>
                     </p>
                     <p class="font_8" style="font-size:14px;">
@@ -1230,59 +1224,59 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 						
               <!-- audio Sentence 展示section -->
 			  <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/Original_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 1:“A king ruled the state in the early days.”</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 5:“A king ruled the state in the early days.”</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/Recovered_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 1:“A king ruled the state in the early days.”</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 5:“A king ruled the state in the early days.”</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/Original_the_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_the_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 3:“The boy was there when the sun rose.”</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 2:“The boy was there when the sun rose.”</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/Recovered_The_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 3:“The boy was there when the sun rose."</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 2:“The boy was there when the sun rose."</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/Original_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 11:“The Navy attacked the big task force."</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 9:“The Navy attacked the big task force."</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/Recovered_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 11:“The Navy attacked the big task force."</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 9:“The Navy attacked the big task force."</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/4_Speech/4_Original_oneTwoThree.mp3" type="audio/mpeg"></audio></center>
+                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_The_birch_canoe_slid_on_the_smooth_planks.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 16:“The empty flask stood on the tin tray."</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 1:“The birch canoe slid on the smooth planks."</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/4_Speech/4_Recovered_oneTwoThree.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_birch_canoe_slid_on_the_smooth_planks_1.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 16:“The empty flask stood on the tin tray.</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 1:“The birch canoe slid on the smooth planks.</p>
                       </div>
                       </div>
 			  
