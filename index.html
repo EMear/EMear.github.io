@@ -944,23 +944,24 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                       </span>
                     </span>
                 </p>
+				<!--
                 <p class="font_7" style="font-size:26px; line-height:1.5em;">
                  <span style="font-size:35px;">
                   <span style="font-weight:bold;">
                    Abstract
                   </span>
                  </span>
-                </p>
+                </p>-->
                 <p class="font_8" style="font-size:14px;">
                     <span class="wixGuard">
                      ​
                     </span>
                 </p>
-                <p class="font_7" style="font-size:22px; line-height:1.5em;">
+                <p class="font_7" style="font-size:22px; line-height:1.5em; align:justify">
                  <span style="font-size:22px;">
 				  Periscope is the first proof-of-concept system that demonstrates the vulnerabilities of headphone-plugged mobile devices. 
 				  It shows that unintentionally leaked electromagnetic radiations (EMR) from mobile devices’ audio amplifiers can be 
-				  exploited as an effective side-channel in recovering victim’s audio sounds. This page presents the demo of Periscope attack 
+				  exploited as an effective side-channel in recovering victim’s audio sounds. Here, we present the demo of Periscope attack 
 				  and its recovered audio samples.  
                  </span>
                 </p>
@@ -1015,7 +1016,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 				  The Periscope’s eavesdropping system includes a portable Wi-Fi access point, an EMR sensor, and a laptop. 
 				  We use a JDread 9600 portable access point to provide Wi-Fi converge for the EMR sensory device (ESP32 board).
 				  The EMR signals measured by the sensor were then transmitted to a remote laptop located up to 15 meters away. 
-				  The audio recovery procedures run in realtime on the laptop to process the EMR measurements and outputs 
+				  The audio recovery procedures run in realtime on the laptop to process the EMR measurements and output 
 				  the recovered sounds.
                  </span>
                 </p>
@@ -1042,8 +1043,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 				  </iframe></center>
 				  <div class="overlayText">
                     <p id="topText" class="fig-caption"><font size="smaller"><strong>Video. 1:</strong> 
-                         The victim placed his smartphone on the table. To launch a stealthy attack,
-                         the attacker placed the eavesdropping devices underneath a wooden table.
+                         The victim places his smartphone on the table. To launch a stealthy attack,
+                         the attacker places the eavesdropping devices underneath a wooden table.
                          </font></p>
                     </div>
 			   </div>
@@ -1072,7 +1073,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:35px;">
                             <span style="font-weight:bold;">
-                               Recovered Audio samples
+                               Recovered Audio Samples
                             </span>
                         </span>
                     </p>
@@ -1085,10 +1086,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     </p>
                     <p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-                         The original and recovered audio samples are displayed below. 
-						 We can evaluate the quality of the recovered audios by comparing them
-						 with the original audios. 
-							
+                         The original and recovered audio samples are listed as follow.  	
                         </span>
                     </p>
                     <p class="font_8" style="font-size:14px;">
@@ -1103,17 +1101,17 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:25px;">
                             <span style="font-weight:bold;">
-                                Music samples
+                                Music Samples
                             </span>
                         </span>
                     </p>
 					
 					<p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-                            The music samples include a ringtones of a phone call (iPhone Tone), a popular songs 
-							(My heart will go on) and a background music for electronic game (Grass Walk). All the recovered 
-							music can be correctly recognized by a music recognition tool (Shazam).  
-							
+                            The music samples include a ringtone ("iPhone"), 
+							a popular song ("My heart will go on"), and a piece of background music ("Grass Walk"). 
+							All the recovered music can be correctly recognized by a music 
+							recognition tool (Shazam). 
                         </span>
                     </p>
 					
@@ -1124,21 +1122,21 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     </p>
                <!-- Music 展示section-->	
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/3_Music/1_Original_iPoneTone.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/3_Music/1_Original_iPoneTone.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “iPhone Tone”</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “iPhone”</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/3_Music/1_Recovered_iPhoneTone1.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/3_Music/1_Recovered_iPhoneTone1.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “iPhone Tone”</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “iPhone”</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/3_Music/2_Original_myHeartWillGoOn.m4a" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/3_Music/2_Original_myHeartWillGoOn.m4a" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
                        <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “My Heart Will Go On”</p>
@@ -1146,13 +1144,13 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/3_Music/2_Recovered_myHeartWillGoOn.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/3_Music/2_Recovered_myHeartWillGoOn.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “My Heart Will Go On”</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/3_Music/3_Original_grasswalk.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/3_Music/3_Original_grasswalk.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
                        <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Grass Walk”</p>
@@ -1160,7 +1158,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/3_Music/3_Recovered_grasswalk.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/3_Music/3_Recovered_grasswalk.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Grass Walk”</p>
                       </div>
@@ -1212,8 +1210,9 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                     </p>
 					<p class="font_7" style="font-size:22px; line-height:1.5em;">
                         <span style="font-size:22px;"> 
-					The speech samples include 4 sentences, which are from the Harvard Sentences. Moreover, for all tested samples
-						in our experinment, we achieved a word error rate (WER) as low as 7.44% via Microsoft speech to text tool.
+						    The speech samples include 4 sentences from the Harvard Sentences []. 
+							We achieved a word error rate (WER) as low as 7.44% in all eavesdropping cases.
+							The recovered audios can be transcribed by Microsoft speech-to-text tool.
                         </span>
                     </p>
                     <p class="font_8" style="font-size:14px;">
@@ -1224,59 +1223,59 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
 						
               <!-- audio Sentence 展示section -->
 			  <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/6_Harvard/Original_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 5:“A king ruled the state in the early days.”</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/6_Harvard/Recovered_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 5:“A king ruled the state in the early days.”</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_the_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/6_Harvard/Original_the_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 2:“The boy was there when the sun rose.”</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/6_Harvard/Recovered_The_boy_was_there_when_the_sun_rose.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 2:“The boy was there when the sun rose."</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/6_Harvard/Original_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 9:“The Navy attacked the big task force."</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/6_Harvard/Recovered_The_Navy_attacked_the_big_task_force.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 9:“The Navy attacked the big task force."</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech</p>
                       </div>
                       </div>
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/6_Harvard/Original_The_birch_canoe_slid_on_the_smooth_planks.wav" type="audio/mpeg"></audio></center>
+                      <center><audio controls><source src="sound/6_Harvard/Original_The_birch_canoe_slid_on_the_smooth_planks.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech of List 1:“The birch canoe slid on the smooth planks."</p>
+                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original speech</p>
                        </div>
                       </div>
     
                <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/6_Harvard/Recovered_The_birch_canoe_slid_on_the_smooth_planks_1.wav" type="audio/mpeg"></audio></center>
+                     <center><audio controls><source src="sound/6_Harvard/Recovered_The_birch_canoe_slid_on_the_smooth_planks_1.wav" type="audio/mpeg"></audio></center>
 		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech of List 1:“The birch canoe slid on the smooth planks.</p>
+                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered speech</p>
                       </div>
                       </div>
 			  
