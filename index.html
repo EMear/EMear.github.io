@@ -257,7 +257,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
  </head>
  
  
- <!--side eye的style库-->
+
  <style type="text/css">
     body {
         font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -341,8 +341,10 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
         width: 50%;
         float: left;
     }
-
-
+	.col-1 {
+        width: 80%;
+        float: left;
+    }
     .fig-center {
         width: 80%;
         float: center;
@@ -872,7 +874,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
              <div class="" data-mesh-id="Containerz00slinlineContent" data-testid="inline-content">
               <div data-mesh-id="Containerz00slinlineContent-gridContainer" data-testid="mesh-container-content">
                
-	        <!-- 标题部分 -->
+	        
                <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-kb1nxam8" style="margin-bottom: -45px;">
                 <p class="font_7" style="font-size:33px; line-height:2em; text-align:center;">
                  <span style="font-weight:bold;">
@@ -885,54 +887,9 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                 </p>
                </div>
 			   
-			<!-- 插入视频--> 
-			<!--<iframe width="540" height="508" src="https://www.youtube.com/embed/t32QvpfOHqw?list=TLGGLAlV_Kjvua4wNTA2MjAyMw" </iframe>-->
 		      
-		    <!-- 被注释掉的 -->  
-               <!-- <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-kb1nxam2">
-                <p class="font_7" style="font-size:47px; line-height:2em; text-align:center;">
-                 <span style="font-weight:bold;">
-                  <span style="font-size:47px;">
-                   <span style="letter-spacing:0.05em;">
-                    Lamphone
-                   </span>
-                  </span>
-                 </span>
-                </p>
-               </div> -->
-		      
-               <!--人名，先暂时注释
-               <div aria-label="Twitter Tweet" id="comp-kb1k4wsx" style="width:0;height:20px" title="Twitter Tweet">
-               </div>
-               <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-k8in692x2">
-                <p class="font_7" style="font-size:64px; line-height:0.8em; text-align:center;">
-                 <span style="font-size:24px;">
-                  <span style="font-weight:bold;">
-                   Ben Nassi
-                  </span>
-                  *       Yaron Pirutin*       Adi Shamir **       Yuval Elovici *    Boris Zadov*
-                 </span>
-                </p>
-                <p class="font_7" style="font-size:64px; line-height:0.8em; text-align:center;">
-                 <span style="font-size:24px;">
-                  *Ben-Gurion University of the Negev
-                  <span style="font-style:italic;">
-                  </span>
-                  <span style="font-size:18px;">
-                   <span style="font-style:italic;">
-                   </span>
-                  </span>
-                  <span style="font-style:italic;">
-                   **
-                  </span>
-                  Weizmann Institute of Science
-                 </span>
-                </p>
-               </div>
-                -->
-
-               <!-- part1 abstract 摘要-->
-               <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-k8in69323"> <!--页面内层总分区-->
+               <!-- part1 abstract -->
+               <div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-k8in69323">
                 <p class="font_8" style="font-size:18px;">
                   <span style="font-size:18px;" class="wixGuard">
                     <span class="wixGuard">​
@@ -944,6 +901,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                       </span>
                     </span>
                 </p>
+				
 				<!--
                 <p class="font_7" style="font-size:26px; line-height:1.5em;">
                  <span style="font-size:35px;">
@@ -952,6 +910,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                   </span>
                  </span>
                 </p>-->
+				
                 <p class="font_8" style="font-size:14px;">
                     <span class="wixGuard">
                      ​
@@ -992,10 +951,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                 </p>
 			  		  
 			   
-               <!-- part2 Recovered Audio samples  音频展示部分-->
-               <!--<div class="_1Q9if _3bcaz" data-testid="richTextElement" id="comp-k8in69323">-->
-			   
-			   <!-- 插入视频 Demo1-->
+               <!-- part2 Recovered Audio samples -->
+			   <!-- Demo1-->
 			   <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:35px;">
                             <span style="font-weight:bold;">
@@ -1010,7 +967,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                  </span>
                 </p>
 				
-			   <!-- 关于Demo的描述 Description of live video-->
+			   <!-- Demo Description of live video-->
 			   <p class="font_7" style="font-size:22px; line-height:1.5em;">
                  <span style="font-size:22px;">
 				  The Periscope’s eavesdropping system includes a portable Wi-Fi access point, an EMR sensor, and a laptop. 
@@ -1027,7 +984,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                  </span>
                 </p>
 			     
-			   <!-- study room的title-->
+			   <!--study room-->
 			   <p class="font_7" style="font-size:26px; line-height:1.5em;">
                     <span style="font-size:25px;">
                           <span style="font-weight:bold;">
@@ -1068,7 +1025,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          </font></p>
                     </div>
 			   </div>
-			   <br /> <!--换行符-->
+			   <br /> <!--space-->
 			   
                     <p class="font_7" style="font-size:26px; line-height:1.5em;">
                         <span style="font-size:35px;">
@@ -1078,7 +1035,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                         </span>
                     </p>
 					
-                    <!-- 占位符 -->
+                    <!-- space -->
                     <p class="font_8" style="font-size:14px;">
                         <span class="wixGuard">
                          ​
@@ -1120,7 +1077,9 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                          ​
                         </span>
                     </p>
-               <!-- Music 展示section-->	
+					
+					
+               <!-- Music section-->	
 			   <div class="col-2 text-center" style="margin-top: 1%;"> 
                       <center><audio controls><source src="sound/3_Music/1_Original_iPoneTone.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
@@ -1163,36 +1122,8 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Grass Walk”</p>
                       </div>
                       </div>
-			    <!--
-			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/3_Music/4_Recovered_Summertrain.wav" type="audio/mpeg"></audio></center>
-		               <div class="overlayText"style="margin-top: 0.9%;">
+			   
 
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “Summer Train”</p>
-                       </div>
-                      </div>
-    
-               <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/3_Music/5_Original_violinMelody.mp3" type="audio/mpeg"></audio></center>
-		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “Summer Train”</p>
-                      </div>
-                      </div>
-			   <div class="col-2 text-center" style="margin-top: 1%;"> 
-                      <center><audio controls autoplay muted><source src="sound/3_Music/5_Original_violinMelody.mp3" type="audio/mpeg"></audio></center>
-		               <div class="overlayText"style="margin-top: 0.9%;">
-
-                       <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Original music: “violinMelody”</p>
-                       </div>
-                      </div>
-    
-               <div class="col-2 text-center" style="margin-top: 1%;"> 
-                     <center><audio controls autoplay muted><source src="sound/3_Music/5_Recovered_violinMelody.mp3" type="audio/mpeg"></audio></center>
-		              <div class="overlayText" style="margin-top: 0.9%;">
-                      <p id="topText" style="margin-top: 0.9%;" class="audio-caption">Recovered music: “violinMelody”</p>
-                      </div>
-                      </div>
-					  -->
 			   <!-- "Title" audio Sentence -->
                     <p class="font_8" style="font-size:14px;">
                         <span class="wixGuard">
@@ -1222,7 +1153,7 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                         </span>
                     </p>
 						
-              <!-- audio Sentence 展示section -->
+              
 			  <div class="col-2 text-center" style="margin-top: 1%;"> 
                       <center><audio controls><source src="sound/Original_A_king_ruled_the_state_in_the_early_days.wav" type="audio/mpeg"></audio></center>
 		               <div class="overlayText"style="margin-top: 0.9%;">
@@ -1296,20 +1227,15 @@ var e=function(t,n){return e=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
                 </div>
                 </div>		  
 			  
- 
-               <br>
-			   <p <font size="smaller" >
-			              
+               <div class="col-1 " style="margin-top: 4%;"> 
+                      <p <font size="smaller" >
                          [1] Harvard Sentences, https://www.cs.columbia.edu/~hgs/audio/harvard.html.
                          </font></p>
-
-			    
-
-               <!-- <div id="comp-kb1gobss" class="VideoPlayer2054936319__root">
-                    <video id="comp-kb1gobss" poster="images/cover.jpeg" src="videos/201799288-1-192.mp4" muted="muted" controls="controls" loop="loop"></video>
-                </div> -->
+                      </div>
+               <br>
 
               </div>
+
              </div>
             </div>
            </div>
